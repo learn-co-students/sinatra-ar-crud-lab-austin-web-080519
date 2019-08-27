@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <div class="article">
+        <h1>Here is your article as it currently looks:</h1>
+        <h2><%= @article.title %></h2>
+        <p><%= @article.content %></p>
+        </div>
+        <form method="POST" action="/articles/<%= @article.id %>">
+            <input id="hidden" type="hidden" name="_method" value="patch">
+            <p>Your new title: <input type="text" name="title"></p>
+            <p> Your new content: <input type="text" name="content"></p>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
